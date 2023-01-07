@@ -13,7 +13,7 @@
       <h2 id="countdown"></h2>
       <p id="main"></p>
       <header>
-          <div><a href="">View High Scores</a></div>
+          <div><a href="/scores/index.html">View High Scores</a></div>
         <div class="time"></div>
       </header>
     <main>
@@ -37,9 +37,37 @@
                 </p>
             
             </div>
-            <div>
-                <form action="" id="scoreForm"> 
-                    <input type="text" placeholder="Enter Initials">
+            <div class="question" id="question2" data-state="hidden">
+                <h1>2. Inside which HTML element do we put the JavaScript?</h1>
+                <p>
+                    <ol>
+                        <li class="option2" data-answer="true">script</li>
+                        <li class="option2">scripting</li>
+                        <li class="option2">JavaScript</li>
+                        <li class="option2" >Java</li>
+                    </ol>
+                </p>
+            
+            </div>
+
+            <div class="question" id="question3" data-state="hidden">
+                <h1>3. The external JavaScript file must contain the script tag.</h1>
+                <p>
+                    <ol>
+                        <li class="option3" data-answer="true">True</li>
+                        <li class="option3">False</li>
+                        
+                    </ol>
+                </p>
+            
+            </div>
+
+
+            <div id="final" class="question" data-state="hidden">
+                <h1>Congrats on finishing the quiz</h1>
+                <p>your score was: <input id="score"></input> </p>
+                <form id="scoreForm" data-state="hidden"> 
+                    <input type="text" placeholder="Enter Initials" id="initials">
                     <input type="submit" name="" id="" value="Submit">
                 </form>
 

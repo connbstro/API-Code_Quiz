@@ -1,6 +1,13 @@
 // Selects element by class
 let timeEl = document.querySelector(".time");
 
+let scores = [];
+let storedScores = JSON.parse(localStorage.getItem("quizSave"));
+
+if (storedScores !== null) {
+  scores = storedScores;
+}
+
 // Selects element by id
 let mainEl = document.getElementById("main");
 
@@ -41,16 +48,75 @@ startBtn.addEventListener("click", function () {
   //   }
 });
 
+let currentScore = 0;
 let q1 = document.querySelectorAll(".option1");
 // Loops through divTags to set each one to have the color blue and the font size of 30px
 for (var i = 0; i < q1.length; i++) {
   q1[i].addEventListener("click", function () {
     if (this.hasAttribute("data-answer")) {
-      console.log("true!");
-      localStorage.setItem("quizScore", "1");
+      currentScore += 1;
+      localStorage.setItem("quizScore", currentScore);
+      question1.setAttribute("data-state", "hidden");
+      question2.setAttribute("data-state", "");
     } else {
       console.log("false!");
       secondsLeft -= 5;
     }
   });
 }
+
+let q2 = document.querySelectorAll(".option2");
+// Loops through divTags to set each one to have the color blue and the font size of 30px
+for (var i = 0; i < q2.length; i++) {
+  q2[i].addEventListener("click", function () {
+    if (this.hasAttribute("data-answer")) {
+      currentScore += 1;
+      localStorage.setItem("quizScore", currentScore);
+      question2.setAttribute("data-state", "hidden");
+      question3.setAttribute("data-state", "");
+    } else {
+      console.log("false!");
+      secondsLeft -= 5;
+    }
+  });
+}
+
+let q3 = document.querySelectorAll(".option3");
+// Loops through divTags to set each one to have the color blue and the font size of 30px
+for (var i = 0; i < q3.length; i++) {
+  q3[i].addEventListener("click", function () {
+    if (this.hasAttribute("data-answer")) {
+      currentScore += 1;
+      localStorage.setItem("quizScore", currentScore);
+      // question3.setAttribute("data-state", "hidden");
+      // let final = querySelector("#final");
+      final.setAttribute("data-state", "");
+    } else {
+      console.log("false!");
+      secondsLeft -= 5;
+    }
+  });
+}
+
+let finalScore = localStorage.getItem("quizScore");
+// document.querySelector("#score").value(finalScore);
+
+let form = document.querySelector("#scoreForm");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  // create score object from submission
+  let initials = document.querySelector("#initials").value;
+  let score = localStorage.getItem("quizScore");
+  let newScore = {
+    initials: initials,
+    score: score,
+  };
+  scores.push(newScore);
+
+  // Add to the existing value
+  // let saveScore = saved.push(newScore);
+  console.log("submit");
+
+  // set new submission to local storage
+  localStorage.setItem("quizSave", JSON.stringify(scores));
+});
