@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>API Code Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="welcome">Welcome to My Quiz</h1>
+      <h2 id="countdown"></h2>
+      <p id="main"></p>
+      <header>
+          <div><a href="">View High Scores</a></div>
+        <div class="time"></div>
+      </header>
+    <main>
+        <div class="quiz">
+            <div class="start" id="start">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions within the time limit.
+                    Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                    <button id="startBtn">Start Quiz</button>
+
+            </div>
+            <div class="question" id="question1" data-state="hidden">
+                <h1>1. Commonly used data types do not include</h1>
+                <p>
+                    <ol>
+                        <li class="option1">booleans</li>
+                        <li class="option1">strings</li>
+                        <li class="option1">numbers</li>
+                        <li class="option1" data-answer="true">square brackets</li>
+                    </ol>
+                </p>
+            
+            </div>
+            <div>
+                <form action="" id="scoreForm"> 
+                    <input type="text" placeholder="Enter Initials">
+                    <input type="submit" name="" id="" value="Submit">
+                </form>
+
+            </div>
+
+
+        </div>
+        
+    </main>
+    </div>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

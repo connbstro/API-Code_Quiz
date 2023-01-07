@@ -1,0 +1,4 @@
+.start[data-state='hidden'],
+.question[data-state='hidden'] {
+    display: none;
+}
