@@ -88,7 +88,7 @@ for (var i = 0; i < q3.length; i++) {
     if (this.hasAttribute("data-answer")) {
       currentScore += 1;
       localStorage.setItem("quizScore", currentScore);
-      // question3.setAttribute("data-state", "hidden");
+      question3.setAttribute("data-state", "hidden");
       // let final = querySelector("#final");
       final.setAttribute("data-state", "");
     } else {

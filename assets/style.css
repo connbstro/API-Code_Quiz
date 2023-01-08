@@ -2,3 +2,41 @@
 .question[data-state='hidden'] {
     display: none;
 }
+
+.quiz h1 {
+    text-align: center;
+    color: blueviolet;
+    font-size: 48px;
+    font-family: Fira Sans;
+}
+
+.quiz p {
+    display: block;
+    /* padding: 30px 30px 60px 30px; */
+    border-radius: 10px;
+    margin: 10px 150px 20px 150px;
+    max-width: 900px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#startBtn,
+ol li {
+    /* display: inline-block; */
+    font-size: 21px;
+    padding: 13px 20px;
+    margin-top: 12px;
+    background-color: transparent;
+    border: 2.3px solid rgb(176, 71, 233);
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    filter: drop-shadow(-3px 4px 4px lightgray);
+    align-content: center;
+}
+
+#startBtn:hover,
+#startBtn:focus {
+    box-shadow: inset 7em 0 0 0 rgb(176, 71, 233);
+    transition: 0.5s;
+}
