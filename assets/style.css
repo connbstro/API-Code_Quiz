@@ -3,6 +3,12 @@
     display: none;
 }
 
+
+.time {
+    float: right;
+    font-size: 20px;
+}
+
 .quiz h1 {
     text-align: center;
     color: blueviolet;
@@ -20,20 +26,27 @@
     font-size: 20px;
 }
 
-#startBtn,
-ol li {
-    /* display: inline-block; */
-    font-size: 21px;
-    padding: 13px 20px;
-    margin-top: 12px;
-    background-color: transparent;
-    border: 2.3px solid rgb(176, 71, 233);
-    border-radius: 5px;
-    color: #000;
+#startBtn {
+    display: inline-block;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid rgb(176, 71, 233);
     filter: drop-shadow(-3px 4px 4px lightgray);
-    align-content: center;
 }
+
+li {
+    border: solid 2px rgb(195, 0, 255);
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 20px;
+    padding: 10px;
+    width: 20%;
+    filter: drop-shadow(-3px 4px 4px lightgray);
+    cursor: pointer;
+}
+
 
 #startBtn:hover,
 #startBtn:focus {
