@@ -1,11 +1,10 @@
 // Selects element by class
 let timeEl = document.querySelector(".time");
-
+let quizComplete = false;
 let scores = [];
-let storedScores = JSON.parse(localStorage.getItem("quizSave"));
-
-if (storedScores !== null) {
-  scores = storedScores;
+let storedScores = "";
+if (localStorage.getItem("quizSave")) {
+  storedScores = JSON.parse(localStorage.getItem("quizSave"));
 }
 
 // Selects element by id
@@ -19,11 +18,11 @@ function setTime() {
     secondsLeft--;
     timeEl.textContent = secondsLeft + " seconds left.";
 
-    if (secondsLeft === 0) {
+    if (secondsLeft === 0 || quizComplete == true) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
       // Calls function to create and append image
-      sendMessage();
+      // sendMessage();
     }
   }, 1000);
 }
@@ -61,6 +60,9 @@ for (var i = 0; i < q1.length; i++) {
     } else {
       console.log("false!");
       secondsLeft -= 5;
+      alert("false!");
+      question1.setAttribute("data-state", "hidden");
+      question2.setAttribute("data-state", "");
     }
   });
 }
@@ -76,6 +78,9 @@ for (var i = 0; i < q2.length; i++) {
       question3.setAttribute("data-state", "");
     } else {
       console.log("false!");
+      alert("false!");
+      question2.setAttribute("data-state", "hidden");
+      question3.setAttribute("data-state", "");
       secondsLeft -= 5;
     }
   });
@@ -93,8 +98,13 @@ for (var i = 0; i < q3.length; i++) {
       final.setAttribute("data-state", "");
     } else {
       console.log("false!");
+      alert("false!");
+      question3.setAttribute("data-state", "hidden");
+      final.setAttribute("data-state", "");
       secondsLeft -= 5;
     }
+    quizComplete = true;
+    document.getElementById("score").innerHTML = localStorage.getItem("quizScore");
   });
 }
 
@@ -111,12 +121,13 @@ form.addEventListener("submit", function (event) {
     initials: initials,
     score: score,
   };
-  scores.push(newScore);
+
+  scores.push(JSON.stringify([newScore]));
 
   // Add to the existing value
   // let saveScore = saved.push(newScore);
   console.log("submit");
 
   // set new submission to local storage
-  localStorage.setItem("quizSave", JSON.stringify(scores));
+  localStorage.setItem("quizSave", scores);
 });

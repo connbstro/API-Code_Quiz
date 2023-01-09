@@ -12,3 +12,8 @@ for (let i = 0; i < savedScores.length; i++) {
   li.appendChild(document.createTextNode(score));
   list.appendChild(li);
 }
+
+let clearBtn = document.querySelector("#clear");
+clearBtn.addEventListener("click", function() {
+    localStorage.setItem("quizSave", "");
+});
