@@ -94,3 +94,9 @@ a:hover {
     filter: drop-shadow(-3px 4px 4px lightgray);
     cursor: pointer;
 }
+
+#clear:hover,
+#clear:focus {
+    background-color: rgb(186, 127, 240);
+    color: white;
+}
