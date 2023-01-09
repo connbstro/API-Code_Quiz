@@ -54,7 +54,9 @@ a:hover {
     filter: drop-shadow(-3px 4px 4px lightgray);
 }
 
-li {
+.option1,
+.option2,
+.option3 {
     border: solid 2px rgb(195, 0, 255);
     border-radius: 5px;
     margin: 20px;
@@ -69,4 +71,26 @@ li {
 #startBtn:focus {
     box-shadow: inset 7em 0 0 0 rgb(176, 71, 233);
     transition: 0.5s;
+}
+
+#back {
+    border: solid 2px rgb(195, 0, 255);
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 20px;
+    padding: 10px;
+    width: 20%;
+    filter: drop-shadow(-3px 4px 4px lightgray);
+    cursor: pointer;
+}
+
+#clear {
+    border: solid 2px rgb(195, 0, 255);
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 20px;
+    padding: 10px;
+    width: 20%;
+    filter: drop-shadow(-3px 4px 4px lightgray);
+    cursor: pointer;
 }
