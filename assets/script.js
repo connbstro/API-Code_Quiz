@@ -1,5 +1,5 @@
 // Selects element by class
-// let timeEl = document.querySelector(".time");
+let timeEl = document.querySelector(".time");
 let quizComplete = false;
 let scores = [];
 let storedScores = "";
