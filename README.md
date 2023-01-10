@@ -23,3 +23,5 @@ The purpose of this project was to create a coding quiz that is timed and presen
 - Display next question when a choice button is clicked
 - Notify user if they're choice selection is incorrect
 - Give the user the ability to enter their initials and save their highscore
+- Made the timer stop when the quiz is finished
+- Took time off for each question that was incorreclty answered
