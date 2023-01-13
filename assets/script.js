@@ -28,7 +28,7 @@ function setTime() {
 }
 
 let start = document.querySelector("#start");
-let startBtn = document.querySelector("#startBtn");
+let startBtn = document.getElementById("startBtn");
 let question1 = document.querySelector("#question1");
 
 // Start Quiz
