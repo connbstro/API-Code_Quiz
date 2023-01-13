@@ -104,7 +104,8 @@ for (var i = 0; i < q3.length; i++) {
       secondsLeft -= 5;
     }
     quizComplete = true;
-    document.getElementById("score").innerHTML = localStorage.getItem("quizScore");
+    document.getElementById("score").innerHTML =
+      localStorage.getItem("quizScore");
   });
 }
 
