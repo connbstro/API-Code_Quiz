@@ -73,7 +73,7 @@ a:hover {
     transition: 0.5s;
 }
 
-#back {
+.back {
     border: solid 2px rgb(195, 0, 255);
     border-radius: 5px;
     margin: 20px;
